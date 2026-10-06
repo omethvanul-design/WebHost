@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ruksewana Furniture - Premium handcrafted furniture for your dream home in Sri Lanka. Quality wood, timeless designs.">
+    <title>Ruksewana Furniture | Premium Handcrafted Furniture in Sri Lanka</title>
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Ruksewana Furniture | Premium Handcrafted Furniture">
+    <meta property="og:description" content="Premium handcrafted furniture for your dream home in Sri Lanka.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome 6.5 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Hero section with video background */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #1a2a12 !important;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-section::before,
+        .hero-overlay {
+            display: none !important;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content p {
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7), 0 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 1. HEADER -->
+    <header class="fixed-top">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Ruksewana Furniture Logo" class="logo" style="height: 70px;">
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#categories" class="dropdown-toggle">Collection <i
+                                class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/pantry-cupboards.html">Pantry Cupboards</a></li>
+                            <li><a href="pages/doors-windows.html">Doors & Windows</a></li>
+                            <li><a href="pages/bedding-solutions.html">Bedding Solutions</a></li>
+                            <li><a href="pages/stair-cases-railings.html">Stair Cases & Railings</a></li>
+                            <li><a href="pages/dining-sets.html">Dining Sets</a></li>
+                            <li><a href="pages/book-racks-wallshelves.html">Book Racks & Wall Shelves</a></li>
+                            <li><a href="pages/tv-stands-other.html">TV Stands and Cupboards</a></li>
+                            <li><a href="pages/dressing-tables.html">Dressing Tables</a></li>
+                            <li><a href="pages/tables-chairs.html">Tables & Chairs</a></li>
+                            <li><a href="pages/other.html">Other</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pages/reviews.html">Reviews</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. HERO SECTION -->
+        <section id="home" class="hero-section">
+            <video class="hero-video" autoplay loop muted playsinline>
+                <source src="videos/gemini_generated_video_ddacad92.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-content animate-on-scroll" data-animation="fade-in">
+                <h1>Crafting Comfort, Building Elegance</h1>
+                <p>Premium handcrafted furniture for your dream home. Quality wood, timeless designs.</p>
+                <a href="#categories" class="cta-btn">Explore Collection</a>
+            </div>
+        </section>
+
+        <!-- 3. ABOUT SECTION -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose Ruksewana Furniture?</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card animate-on-scroll" data-animation="slide-up">
+                        <div class="icon">🪵</div>
+                        <h3>Premium Quality Wood</h3>
+                        <p>We use only the finest teak, mahogany, Ginisapu, and gansooriya etc sourced locally.</p>
+                    </div>
+                    <div class="feature-card animate-on-scroll" data-animation="slide-up"
+                        style="transition-delay: 100ms;">
+                        <div class="icon">🎨</div>
+                        <h3>Custom Designs</h3>
+                        <p>Every piece is crafted to match your unique style and space requirements.</p>
+                    </div>
+                    <div class="feature-card animate-on-scroll" data-animation="slide-up"
+                        style="transition-delay: 200ms;">
+                        <div class="icon">✨</div>
+                        <h3>Unmatched Finishing</h3>
+                        <p>Flawlessly smooth surfaces, rich natural grain luster, and durable protective coats on every
+                            single handcrafted piece.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CATEGORIES SECTION -->
+        <section id="categories" class="categories-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Collections</h2>
+                    <p>Browse our wide range of handcrafted furniture</p>
+                </div>
+                <div class="categories-grid">
+                    <!-- Pantry Cupboards -->
+                    <a href="pages/pantry-cupboards.html" class="category-card animate-on-scroll"
+                        data-animation="slide-up">
+                        <div class="category-placeholder"
+                            style="background: url('images/Pantry/P1.jpg') center/cover no-repeat;">
+                        </div>
+                        <div class="category-overlay">
+                            <h3>Pantry Cupboards</h3>
+                        </div>
+                    </a>
+
+                    <!-- Doors & Windows -->
+                    <a href="pages/doors-windows.html" class="category-card animate-on-scroll"
+                        data-animation="slide-up">
+                        <div class="category-placeholder"
+                            style="background: url('images/door/DO1.jpg') center/cover no-repeat;">
+                        </div>
+                        <div class="category-overlay">
+                            <h3>Doors & Windows</h3>
+                        </div>
+                    </a>
+
+                    <!-- Bedding Solutions -->
+                    <a href="pages/bedding-solutions.html" class="category-card animate-on-scroll"
+                        data-animation="slide-up">
+                        <div class="category-placeholder"
+                            style="background: url('images/bed/B1.jpg') center/cover no-repeat;">
+                        </div>
+                        <div class="category-overlay">
+                            <h3>Bedding Solutions</h3>
+                        </div>
+                    </a>
+
+                    <!-- Stair Cases & Railings -->
+                    <a href="pages/stair-cases-railings.html" class="category-card animate-on-scroll"
+                        data-animation="slide-up">
+                        <div class="category-placeholder"
+                            style="background: url('images/raillings/R1.jpg') center/cover no-repeat;">
+                        </div>
+                        <div class="category-overlay">
+                            <h3>Stair Cases & Railings</h3>
+                        </div>
+                    </a>
+
+                    <!-- Dining Sets -->
+                    <a href="pages/dining-sets.html" class="category-card animate-on-scroll" data-animation="slide-up">
+                        <div class="category-placeholder"
+                            style="background: url('images/dining/DS1.jpg') center/cover no-repeat;">
+                        </div>
+                        <div class="category-overlay">
+                            <h3>Dining Sets</h3>
+                        </div>
+                    </a>
+
+                    <!-- Book Racks & Wall Shelves -->
+                    <a href="pages/book-racks-wallshelves.html" class="category-card animate-on-scroll"
+                        data-animation="slide-up">
+                        <div class="category-placeholder"
+                            style="background: url('images/book/BR1.jpg') center/cover no-repeat;">
+                        </div>
+                        <div class="category-overlay">
+                            <h3>Book Racks & Wall Shelves</h3>
+                        </div>
+                    </a>
+
+                    <!-- TV Stands and Cupboards -->
+                    <a href="pages/tv-stands-other.html" class="category-card animate-on-scroll"
+                        data-animation="slide-up">
+                        <div class="category-placeholder"
+                            style="background: url('images/tvandother/TV1.jpg') center/cover no-repeat;">
+                        </div>
+                        <div class="category-overlay">
+                            <h3>TV Stands and Cupboards</h3>
+                        </div>
+                    </a>
+
+                    <!-- Dressing Tables -->
+                    <a href="pages/dressing-tables.html" class="category-card animate-on-scroll"
+                        data-animation="slide-up">
+                        <div class="category-placeholder"
+                            style="background: url('images/Dressing/33c067af-3c2e-4b89-839d-41d606bf6934.jpeg') center/cover no-repeat;">
+                        </div>
+                        <div class="category-overlay">
+                            <h3>Dressing Tables</h3>
+                        </div>
+                    </a>
+
+                    <!-- Tables & Chairs -->
+                    <a href="pages/tables-chairs.html" class="category-card animate-on-scroll"
+                        data-animation="slide-up">
+                        <div class="category-placeholder"
+                            style="background: url('images/Tables&amp;chairs/5 Mẫu bàn làm việc tại nhà hiện đại giúp tối ưu không gian.jpeg') center/cover no-repeat;">
+                        </div>
+                        <div class="category-overlay">
+                            <h3>Tables & Chairs</h3>
+                        </div>
+                    </a>
+
+                    <!-- Other -->
+                    <a href="pages/other.html" class="category-card animate-on-scroll"
+                        data-animation="slide-up">
+                        <div class="category-placeholder"
+                            style="background: url('images/other/Kit1.jpg') center/cover no-repeat;">
+                        </div>
+                        <div class="category-overlay">
+                            <h3>Other</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. REVIEWS SECTION -->
+        <section id="reviews" class="reviews-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Customer Reviews</h2>
+                    <p>Hear from our valued customers &bull; <a href="pages/reviews.html" style="color: var(--primary); font-weight: 600; text-decoration: underline;">View Full Reviews Page &rarr;</a></p>
+                    <div id="reviews-actions" style="display: none; margin-top: 10px;">
+                        <button type="button" id="clear-all-reviews-btn" class="clear-reviews-btn">
+                            <i class="fa-solid fa-trash-can" style="color: #e53e3e;"></i> Clear all reviews
+                        </button>
+                    </div>
+                </div>
+
+                <div id="reviews-container" class="reviews-container">
+                    <!-- JS will dynamically load stored reviews here -->
+                </div>
+
+                <div class="review-form-wrapper animate-on-scroll" data-animation="slide-up">
+                    <h3>Leave a Review</h3>
+                    <form id="review-form" class="review-form">
+                        <div class="form-group">
+                            <label for="reviewer-name">Your Name</label>
+                            <input type="text" id="reviewer-name" name="name" required>
+                        </div>
+                        <div class="form-group rating-group">
+                            <label>Rating</label>
+                            <div class="star-rating">
+                                <span class="star-input" data-value="1"><i class="fa-solid fa-star"></i></span>
+                                <span class="star-input" data-value="2"><i class="fa-solid fa-star"></i></span>
+                                <span class="star-input" data-value="3"><i class="fa-solid fa-star"></i></span>
+                                <span class="star-input" data-value="4"><i class="fa-solid fa-star"></i></span>
+                                <span class="star-input" data-value="5"><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <input type="hidden" id="rating-value" name="rating" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="review-text">Your Review</label>
+                            <textarea id="review-text" name="review" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. LOCATION & CONTACT SECTION -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Visit Us</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="map-column animate-on-scroll" data-animation="slide-left">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.5!2d80.6228292!3d7.3278636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae36934e425cbf7%3A0x2da3cee02aea249e!2sRuksewana%20Furnitures%20-%20workshop!5e0!3m2!1sen!2slk!4v1726800000000"
+                            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="map-link" style="margin-top: 15px;">
+                            <a href="https://maps.app.goo.gl/BD9RNuAQD9pph62G8" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-solid fa-map-location-dot"></i> Open in Google Maps
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-column animate-on-scroll" data-animation="slide-right">
+                        <h3>Contact Information</h3>
+                        <ul class="contact-details">
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span><strong>Address:</strong> <a href="https://maps.app.goo.gl/BD9RNuAQD9pph62G8" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">261/4, Ranawana Road, Katugastota</a></span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <span><strong>Phone:</strong> <a href="tel:0779485498">0779485498</a> / <a
+                                        href="tel:0779275498">0779275498</a></span>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span><strong>WhatsApp:</strong> <a href="https://wa.me/94779275498"
+                                        target="_blank">0779275498</a></span>
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-clock"></i>
+                                <span><strong>Open Hours:</strong> Mon-Sat 8:00 AM - 6:00 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 7. FOOTER -->
+    <footer style="background-color: #2D5016; color: white;">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <img src="images/logo.png" alt="Ruksewana Furniture Logo" class="footer-logo" style="height: 50px;">
+                <p class="tagline">Crafting quality furniture since tradition meets modern design.</p>
+            </div>
+
+            <div class="footer-col links-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="#categories">Collections</a></li>
+                    <li><a href="pages/reviews.html">Reviews</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col social-col">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1FX2zQ7nyv/" target="_blank" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.me/94779275498" target="_blank" aria-label="WhatsApp"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="footer-phone">
+                    <i class="fa-solid fa-phone"></i> 0779485498 / 0779275498
+                </div>
+                <div class="footer-phone">
+                    <a href="https://maps.app.goo.gl/BD9RNuAQD9pph62G8" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;"><i class="fa-solid fa-location-dot"></i> 261/4, Ranawana Road, Katugastota</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Ruksewana Furniture. All Rights Reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 8. FLOATING BUTTONS -->
+    <a href="https://wa.me/94779275498" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

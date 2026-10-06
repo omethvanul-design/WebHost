@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruksewana Furniture - Live Website Preview</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a2a12;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Top Bar */
+        .preview-header {
+            background: #ffffff;
+            border-bottom: 2px solid #6BB536;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            z-index: 100;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand img {
+            height: 44px;
+        }
+
+        .brand-info h1 {
+            font-size: 1.1rem;
+            color: #2D5016;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .brand-info span {
+            font-size: 0.75rem;
+            color: #6BB536;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Page Selector & Controls */
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .select-wrapper {
+            position: relative;
+        }
+
+        .select-wrapper select {
+            appearance: none;
+            background: #F5F9F2;
+            border: 2px solid #D4E8C8;
+            border-radius: 8px;
+            padding: 8px 36px 8px 14px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #2D5016;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .select-wrapper select:focus,
+        .select-wrapper select:hover {
+            border-color: #6BB536;
+            background: #ffffff;
+        }
+
+        .select-wrapper i {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6BB536;
+            pointer-events: none;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive View Buttons */
+        .view-modes {
+            display: flex;
+            background: #F5F9F2;
+            border-radius: 8px;
+            padding: 3px;
+            border: 1px solid #D4E8C8;
+        }
+
+        .view-btn {
+            background: transparent;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            color: #666;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .view-btn.active {
+            background: #6BB536;
+            color: #ffffff;
+            box-shadow: 0 2px 6px rgba(107, 181, 54, 0.3);
+        }
+
+        .action-btn {
+            background: #2D5016;
+            color: #ffffff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .action-btn:hover {
+            background: #4A8C1F;
+            transform: translateY(-1px);
+        }
+
+        .action-btn.whatsapp {
+            background: #25D366;
+        }
+
+        .action-btn.whatsapp:hover {
+            background: #1DA851;
+        }
+
+        /* Frame Container */
+        .frame-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            overflow: hidden;
+            background: #23381a;
+            position: relative;
+        }
+
+        .device-container {
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .device-container.tablet {
+            width: 768px;
+            height: 96%;
+            border: 8px solid #2d3748;
+            border-radius: 24px;
+        }
+
+        .device-container.mobile {
+            width: 390px;
+            height: 96%;
+            border: 10px solid #1a202c;
+            border-radius: 36px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: #ffffff;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .preview-header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .controls {
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Controls -->
+    <header class="preview-header">
+        <div class="brand">
+            <img src="images/logo.png" alt="Ruksewana Furniture Logo">
+            <div class="brand-info">
+                <h1>Ruksewana Furniture</h1>
+                <span>Interactive Website Preview</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <!-- Page Selector -->
+            <div class="select-wrapper">
+                <select id="page-select" onchange="changePage(this.value)">
+                    <option value="index.html">🏠 Home Page</option>
+                    <option value="pages/about.html">📖 About Us</option>
+                    <option value="pages/contact.html">📞 Contact Us</option>
+                    <option value="pages/reviews.html">⭐ Customer Reviews</option>
+                    <option value="pages/pantry-cupboards.html">🗄️ Pantry Cupboards</option>
+                    <option value="pages/doors-windows.html">🚪 Doors & Windows</option>
+                    <option value="pages/bedding-solutions.html">🛏️ Bedding Solutions</option>
+                    <option value="pages/stair-cases-railings.html">🪜 Stair Cases & Railings</option>
+                    <option value="pages/dining-sets.html">🍽️ Dining Sets</option>
+                    <option value="pages/book-racks-wallshelves.html">📚 Book Racks & Wall Shelves</option>
+                    <option value="pages/tv-stands-other.html">📺 TV Stands and Cupboards</option>
+                    <option value="pages/dressing-tables.html">🪞 Dressing Tables</option>
+                    <option value="pages/tables-chairs.html">🪑 Tables & Chairs</option>
+                    <option value="pages/other.html">🪵 Other Creations & Accessories</option>
+                </select>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <!-- Viewport Switcher -->
+            <div class="view-modes">
+                <button class="view-btn active" onclick="setViewMode('desktop', this)">
+                    <i class="fa-solid fa-desktop"></i> Desktop
+                </button>
+                <button class="view-btn" onclick="setViewMode('tablet', this)">
+                    <i class="fa-solid fa-tablet-screen-button"></i> Tablet (768px)
+                </button>
+                <button class="view-btn" onclick="setViewMode('mobile', this)">
+                    <i class="fa-solid fa-mobile-screen"></i> Mobile (390px)
+                </button>
+            </div>
+
+            <!-- Action Buttons -->
+            <a id="open-tab-btn" href="index.html" target="_blank" class="action-btn" title="Open selected page directly in a new browser tab">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open In New Tab
+            </a>
+
+            <a href="https://wa.me/94779275498" target="_blank" class="action-btn whatsapp" title="Direct WhatsApp Support">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Preview Device Container -->
+    <main class="frame-wrapper">
+        <div id="device-container" class="device-container">
+            <iframe id="preview-frame" src="index.html" title="Ruksewana Furniture Website"></iframe>
+        </div>
+    </main>
+
+    <script>
+        const frame = document.getElementById('preview-frame');
+        const container = document.getElementById('device-container');
+        const openTabBtn = document.getElementById('open-tab-btn');
+        const pageSelect = document.getElementById('page-select');
+
+        function changePage(pageUrl) {
+            frame.src = pageUrl;
+            openTabBtn.href = pageUrl;
+        }
+
+        function setViewMode(mode, btn) {
+            document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            container.classList.remove('tablet', 'mobile');
+            if (mode === 'tablet') {
+                container.classList.add('tablet');
+            } else if (mode === 'mobile') {
+                container.classList.add('mobile');
+            }
+        }
+
+        // Sync dropdown if user navigates inside iframe
+        frame.addEventListener('load', () => {
+            try {
+                const currentPath = frame.contentWindow.location.pathname;
+                const options = Array.from(pageSelect.options);
+                const matchingOption = options.find(opt => currentPath.endsWith(opt.value.replace('../', '')));
+                if (matchingOption) {
+                    pageSelect.value = matchingOption.value;
+                    openTabBtn.href = matchingOption.value;
+                }
+            } catch (e) {
+                // Cross-origin fallback (not an issue for local file previews)
+            }
+        });
+    </script>
+</body>
+</html>
